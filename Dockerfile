@@ -1,24 +1,11 @@
-FROM python:3.6-alpine
+FROM node:7-onbuild
+
+# set maintainer
 MAINTAINER Griffin <ggriffin924@gmail.com>
+# set a health check
+HEALTHCHECK --interval=5s \
+            --timeout=5s \
+            CMD curl -f http://127.0.0.1:8000 || exit 1
 
-RUN adduser -D testuser
-
-WORKDIR /home/testuser
-
-COPY requirements.txt requirements.txt
-RUN python -m venv venv
-RUN venv/bin/pip install -r requirements.txt
-RUN venv/bin/pip install gunicorn
-
-COPY app app
-COPY migrations migrations
-COPY microblog.py config.py boot.sh ./
-RUN chmod +x boot.sh
-
-ENV FLASK_APP microblog.py
-
-RUN chown -R testuser:testuser ./
-USER testuser
-
-EXPOSE 5000
-ENTRYPOINT ["./boot.sh"]
+# tell docker what port to expose
+EXPOSE 8000
