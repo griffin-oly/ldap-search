@@ -12,7 +12,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # copy our application inside the container
-COPY package*.json /app/
+COPY hello-node-app/package*.json /app/
 
 # install dependancies
 RUN npm install
