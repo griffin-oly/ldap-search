@@ -17,6 +17,9 @@ COPY hello-node-app/* /app/
 # install dependancies
 RUN npm install
 
+# Bundle app source
+COPY . .
+
 # tell docker what port to expose
 EXPOSE 8000
 
