@@ -26,7 +26,7 @@ const options = {
   // healtcheck options
   healthChecks: {
     '/healthcheck': () => Promise.resolve()
-  },
+  }
 
   // cleanup options
   // timeout: 1000,                   // [optional = 1000] number of milliseconds before forcefull exiting
@@ -35,7 +35,7 @@ const options = {
   // onShutdown,                      // [optional] called right before exiting
 
   // both
-  logger                           // [optional] logger function to be called with errors
+  // logger                           // [optional] logger function to be called with errors
 };
 
 terminus(server, options);
