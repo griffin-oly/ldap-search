@@ -4,10 +4,6 @@ FROM node:8.11.2-alpine
 # set maintainer
 LABEL maintainer "ggriffin924@gmail.com"
 
-
-# Added to install terminus
-RUN npm i @godaddy/terminus --save
-
 # run a command inside the container
 # this will create a directory for our application
 RUN mkdir -p /app
@@ -17,6 +13,10 @@ WORKDIR /app
 
 # copy our application inside the container
 COPY hello-node-app/* /app/
+
+# Added to install terminus
+RUN npm i @godaddy/terminus --save
+`
 
 # tell docker what port to expose
 EXPOSE 8000
