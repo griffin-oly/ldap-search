@@ -18,8 +18,7 @@
   ],
   "author": "ggriffin924@gmail.com",
   "license": "ISC",
-  "devDependencies": {
-     "@godaddy/terminus": ">=2.1.0",
-     "test": ">=0.6.0"
+  "dependencies": {
+     "@godaddy/terminus": ">=2.1.0"
   }
 }

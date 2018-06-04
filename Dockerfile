@@ -14,9 +14,6 @@ WORKDIR /app
 # copy our application inside the container
 COPY hello-node-app/* /app/
 
-# Added to install terminus
-RUN npm i @godaddy/terminus --save
-
 # tell docker what port to expose
 EXPOSE 8000
 
