@@ -14,6 +14,9 @@ WORKDIR /app
 # copy our application inside the container
 COPY hello-node-app/* /app/
 
+# install dependancies
+RUN npm install
+
 # tell docker what port to expose
 EXPOSE 8000
 
