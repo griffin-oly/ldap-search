@@ -1,5 +1,5 @@
 const http = require('http');
-const terminus = require('@godaddy/terminus');
+const terminus = require('node_modules/@godaddy/terminus');
 
 function onSignal () {
   console.log('server is starting cleanup');
