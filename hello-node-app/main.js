@@ -40,4 +40,4 @@ const options = {
 
 terminus(server, options);
 
-server.listen(PORT || 8000);
+server.listen(8000);
