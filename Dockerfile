@@ -12,13 +12,13 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # copy our application inside the container
-COPY hello-node-app/* /app/
+COPY package*.json /app/
 
 # install dependancies
 RUN npm install
 
 # Bundle app source
-COPY . .
+COPY hello-node-app/* /app/
 
 # tell docker what port to expose
 EXPOSE 8000
