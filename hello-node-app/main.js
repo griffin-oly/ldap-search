@@ -25,7 +25,7 @@ const server = http.createServer((request, response) => {
 const options = {
   // healtcheck options
   healthChecks: {
-    '/healthcheck': check          // a promise returning function indicating service health
+    '/healthcheck': () => Promise.resolve()
   },
 
   // cleanup options
