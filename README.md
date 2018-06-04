@@ -9,3 +9,4 @@ When a commit is pushed this should autobuild. Second task will be to build a do
 Update 1.0:
 # Added correct version of Node Alpine
 # changed node version to 8.
+# Deleted old images from host
